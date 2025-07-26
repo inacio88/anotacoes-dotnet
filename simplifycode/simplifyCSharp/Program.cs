@@ -1,4 +1,5 @@
-﻿using simplifyCSharp;
+﻿using Microsoft.Data.SqlClient;
+using simplifyCSharp;
 using static System.Console;
 
 WriteLine("Hello, World!");
@@ -51,3 +52,21 @@ WriteLine(n1);
 var (q1,  _) = importantLogic.SplitName("Carlos Alberto");
 
 WriteLine(q1);
+
+
+//dispose
+using var conn = new SqlConnection("");
+
+
+using (var conn2 = new SqlConnection(""))
+{
+
+}
+
+
+
+string numberText = "43";
+
+int.TryParse(numberText, out int numberValue);
+
+WriteLine($"the number is {numberValue}");
